@@ -1,6 +1,7 @@
 import Image from "next/image"
-import { Plane, Dumbbell } from "lucide-react"
+import { Plane, Dumbbell, Box } from "lucide-react"
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
 import { Project } from "@/types"
 
 interface ProjectCardProps {
@@ -10,6 +11,7 @@ interface ProjectCardProps {
 const iconMap = {
   plane: Plane,
   dumbbell: Dumbbell,
+  box: Box,
 }
 
 export function ProjectCard({ project }: ProjectCardProps) {
@@ -38,7 +40,12 @@ export function ProjectCard({ project }: ProjectCardProps) {
           </div>
         ) : null}
         <CardHeader>
-          <CardTitle>{project.title}</CardTitle>
+          <CardTitle className="flex items-center gap-2">
+            {project.title}
+            {project.comingSoon && (
+              <Badge variant="secondary">Kommer</Badge>
+            )}
+          </CardTitle>
           <CardDescription>{project.description}</CardDescription>
         </CardHeader>
       </Card>

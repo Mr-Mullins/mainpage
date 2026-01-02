@@ -17,4 +17,12 @@ export const projects: Project[] = [
     placeholderIcon: "dumbbell",
     url: "https://workout.tomasjons.com",
   },
+  {
+    id: "3",
+    title: "SpaceKit",
+    description: "Enkelt rom- og volumprogram for programmering av ulike volum i konstruksjonsprosjekter.",
+    placeholderColor: "bg-violet-500",
+    placeholderIcon: "box",
+    comingSoon: true,
+  },
 ]

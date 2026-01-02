@@ -4,8 +4,9 @@ export interface Project {
   description: string
   imageUrl?: string
   placeholderColor?: string
-  placeholderIcon?: "plane" | "dumbbell"
+  placeholderIcon?: "plane" | "dumbbell" | "box"
   url?: string
+  comingSoon?: boolean
 }
 
 export interface SocialLink {
